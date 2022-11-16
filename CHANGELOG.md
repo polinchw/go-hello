@@ -1,3 +1,12 @@
+## [0.1.3](https://github.com/polinchw/go-hello/compare/v0.1.2...v0.1.3) (2022-11-16)
+
+
+### Bug Fixes
+
+* Set no-cache to true. ([ea07d65](https://github.com/polinchw/go-hello/commit/ea07d6573a5cbc3c24d2f385add64c2f6c350ab5))
+
+
+
 ## [0.1.2](https://github.com/polinchw/go-hello/compare/v0.1.1...v0.1.2) (2022-11-16)
 
 
@@ -28,10 +37,6 @@
 
 
 ## [1.1.1](https://github.com/polinchw/go-hello/compare/v1.1.0...v1.1.1) (2016-12-12)
-
-
-
-# [1.1.0](https://github.com/polinchw/go-hello/compare/v1.0.2...v1.1.0) (2016-12-12)
 
 
 
