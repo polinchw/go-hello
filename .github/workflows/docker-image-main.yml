@@ -1,8 +1,8 @@
-name: Docker Image CI for Main
+name: Docker Image CI for Master
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   test:
