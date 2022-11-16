@@ -5,20 +5,20 @@ on:
     branches: [ master ]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.7
-      - name: Install pipenv
-        uses: dschep/install-pipenv-action@v1
-      - name: Run tests
-        run: |
-          pipenv install --dev
-          pipenv run python -m pytest
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - name: Set up Python 3.7
+  #       uses: actions/setup-python@v1
+  #       with:
+  #         python-version: 3.7
+  #     - name: Install pipenv
+  #       uses: dschep/install-pipenv-action@v1
+  #     - name: Run tests
+  #       run: |
+  #         pipenv install --dev
+  #         pipenv run python -m pytest
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
