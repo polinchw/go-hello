@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/polinchw/go-hello/compare/v0.1.0...v0.1.1) (2022-11-16)
+
+
+### Bug Fixes
+
+* Comment out the test for now. ([82619eb](https://github.com/polinchw/go-hello/commit/82619eb6a15751aa1274ee3e5ea9a565b91f32ee))
+
+
+
 # [0.1.0](https://github.com/polinchw/go-hello/compare/v1.1.1...v0.1.0) (2022-11-16)
 
 
