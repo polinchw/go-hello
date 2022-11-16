@@ -1,3 +1,12 @@
+## [0.1.4](https://github.com/polinchw/go-hello/compare/v0.1.3...v0.1.4) (2022-11-16)
+
+
+### Bug Fixes
+
+* Try setup-buildx-action. ([86ff21a](https://github.com/polinchw/go-hello/commit/86ff21a376299e4f1ef69c0f3339b03188ddc4db))
+
+
+
 ## [0.1.3](https://github.com/polinchw/go-hello/compare/v0.1.2...v0.1.3) (2022-11-16)
 
 
@@ -33,10 +42,6 @@
 
 * Adding github workflows. ([8f6ab9d](https://github.com/polinchw/go-hello/commit/8f6ab9d665a666a5916c244c3f7fd90b9af1cb6a))
 * Using master branch. ([0c0a097](https://github.com/polinchw/go-hello/commit/0c0a0970bd7b70735a2fd9d029f775599bf54b66))
-
-
-
-## [1.1.1](https://github.com/polinchw/go-hello/compare/v1.1.0...v1.1.1) (2016-12-12)
 
 
 
