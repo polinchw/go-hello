@@ -59,6 +59,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
+          no-cache: true
           push: true
           tags: polinchw/go-hello:${{ steps.changelog.outputs.version }}
           labels: ${{ steps.meta.outputs.labels }}
