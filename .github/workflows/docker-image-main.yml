@@ -1,24 +1,24 @@
-name: Docker Image CI for Master
+name: Docker Image CI for Main
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v1
-  #     - name: Set up Python 3.7
-  #       uses: actions/setup-python@v1
-  #       with:
-  #         python-version: 3.7
-  #     - name: Install pipenv
-  #       uses: dschep/install-pipenv-action@v1
-  #     - name: Run tests
-  #       run: |
-  #         pipenv install --dev
-  #         pipenv run python -m pytest
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: Run tests
+        run: |
+          pipenv install --dev
+          pipenv run python -m pytest
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
@@ -40,14 +40,13 @@ jobs:
 
       - name: conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3.17.1
+        uses: TriPSs/conventional-changelog-action@v3.7.1
         with:
           github-token: ${{ secrets.CHANGELOG_RELEASE }}
           tag-prefix: 'v'
-          output-file: "false"
 
       - name: create release
-        uses: actions/create-release@v1.1.4
+        uses: actions/create-release@v1
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGELOG_RELEASE }}
@@ -57,7 +56,7 @@ jobs:
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v3.2.0
+        uses: docker/build-push-action@v2
         with:
           context: .
           push: true
