@@ -11,7 +11,6 @@ Install dependencies package.
 ```bash
 $ go get -d
 ```
-
 Start web server and default port is `8000`
 
 ```bash
